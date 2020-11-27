@@ -19,6 +19,7 @@
     "@angular/platform-browser": "~11.0.1",
     "@angular/platform-browser-dynamic": "~11.0.1",
     "@angular/router": "~11.0.1",
+    "@auth0/angular-jwt": "^5.0.2",
     "@types/jquery": "^3.5.4",
     "boot": "^0.8.2",
     "bootstrap": "^4.3.1",
