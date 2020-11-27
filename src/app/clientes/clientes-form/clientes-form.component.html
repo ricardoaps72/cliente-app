@@ -4,6 +4,7 @@
 </ol>
 <div class="container">
     <form #clienteForm="ngForm" (ngSubmit)="onSubmit()">
+        
         <div class="row">
             <div class="col-md-12">
                 <div class="alert alert-success" role="alert" *ngIf="success == true">
@@ -14,6 +15,7 @@
                 </div>
             </div>
         </div>
+
         <div class="row" *ngIf="cliente.id">
             <div class="col-md-6">
                 <div class="form-group">
