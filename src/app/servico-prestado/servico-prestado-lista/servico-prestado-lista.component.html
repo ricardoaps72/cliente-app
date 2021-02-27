@@ -57,9 +57,13 @@
                         <td>{{ s.descricao }}</td>
                         <td>{{ s.valor }}</td>
                         <td>{{ s.data }}</td>
-                    </tr>
+                        <input id="Total" name="Total" type="hidden" value={{SomaServico(s.valor)}}>                        
+                    </tr>                    
                 </tbody>
-            </table>            
+            </table>                 
+            <div class="table">
+                <h5><strong>Total Geral :&nbsp; {{TotalServico.toFixed(2)}}</strong></h5>                
+            </div>
         </div>
     </div>
 </div>
