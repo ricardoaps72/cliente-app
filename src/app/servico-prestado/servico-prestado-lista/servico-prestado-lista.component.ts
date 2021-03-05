@@ -10,6 +10,7 @@ import { ServicoPrestadoBusca } from './servicoPrestadoBusca';
 export class ServicoPrestadoListaComponent implements OnInit {
 
   nome! : string;
+  nomeMes! : string [];
   mes! : number;
   meses!: number [];
 
@@ -22,6 +23,8 @@ export class ServicoPrestadoListaComponent implements OnInit {
     private service : ServicoPrestadoService
   ) {
     this.meses = [1,2,3,4,5,6,7,8,9,10,11,12];
+    this.nomeMes = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+                    'Julho', 'Agosto', 'Setembro', 'Outobro','Novembro', 'Dezembro'];
    }
 
   ngOnInit(): void {

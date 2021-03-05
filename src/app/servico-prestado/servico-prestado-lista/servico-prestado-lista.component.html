@@ -15,7 +15,7 @@
                 <select [(ngModel)]="mes" class="form-control" name="mes">
                     <option value="">Selecione ...</option>
                     <option *ngFor="let mes of meses" [value]="mes" >
-                        {{ mes }}
+                        {{ mes }} - {{ nomeMes[mes-1] }}
                     </option>
                 </select>
             </div>
@@ -55,14 +55,14 @@
                     <tr *ngFor="let s of lista">
                         <td>{{ s.cliente.nome }}</td>
                         <td>{{ s.descricao }}</td>
-                        <td>{{ s.valor }}</td>
+                        <td>{{ s.valor.toLocaleString("pt-BR", { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }) }}</td>
                         <td>{{ s.data }}</td>
                         <input id="Total" name="Total" type="hidden" value={{SomaServico(s.valor)}}>                        
                     </tr>                    
                 </tbody>
             </table>                 
             <div class="table">
-                <h5><strong>Total Geral :&nbsp; {{TotalServico.toFixed(2)}}</strong></h5>                
+                <h5><strong>Total Geral : &nbsp; {{ TotalServico.toLocaleString("pt-BR", { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }) }}</strong></h5>                
             </div>
         </div>
     </div>
