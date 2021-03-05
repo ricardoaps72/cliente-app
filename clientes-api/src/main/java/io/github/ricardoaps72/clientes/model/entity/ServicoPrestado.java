@@ -28,5 +28,4 @@ public class ServicoPrestado {
     @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate data;
 
-
 }

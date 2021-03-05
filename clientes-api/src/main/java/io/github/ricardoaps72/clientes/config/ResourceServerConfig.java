@@ -15,6 +15,10 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .antMatchers("/api/usuarios").permitAll()
                 .antMatchers("/api/clientes/**",
                         "/api/servicos-prestados/**").authenticated()
+                //codigo para liberar o h2-console ...
+                //.antMatchers("/h2-console/**").permitAll()
+                //.and().csrf().disable()
+                //.headers().frameOptions().disable();
                 .anyRequest().denyAll();
     }
 }
